@@ -1,0 +1,30 @@
+# hermes-startup
+
+> A stage-based AGENTS.md template for bootstrapping an AI-run company on [Hermes Agent](https://github.com/NousResearch/hermes-agent). Defines an org chart (CEO / Builder / Operator → Engineer, Designer, Growth, Support, Sales, …) where each "agent" is a separate Hermes process with its own `HERMES_HOME`, model, tool allowlist, gateway destination, cost cap, and cron schedule. Mirrors the Paperclip-targeted [paperclip-ing-startup](https://github.com/jaggs6/paperclip-ing-startup) — same shape, different runtime.
+
+This repo is meant to be read by an LLM and used to either (a) interview a founder and produce a filled `AGENTS.md` plus a `hermes-setup.md` checklist of CLI commands, or (b) hand `AGENTS.md` directly to a senior Hermes user.
+
+## Core docs
+
+- [README.md](README.md): Project overview, two quick-start paths, repo map.
+- [AGENTS.md](AGENTS.md): The template. Stage 0–4 org chart, per-stage % budget allocations, per-agent Hermes config (HERMES_HOME, model, tools, gateway, cron, cost cap), approval gates, promotion/demotion rules. **Edit this file** to spec a company.
+- [CONTRIBUTING.md](CONTRIBUTING.md): PR rules.
+
+## LLM instructions
+
+- [prompts/onboarding.md](prompts/onboarding.md): Step-by-step interview script for an LLM to elicit the inputs needed to fill `AGENTS.md` and emit a `hermes-setup.md` with the exact `hermes` CLI commands per agent. Use when a user says "help me set up Hermes for my company."
+
+## Examples
+
+- [examples/b2b-saas.md](examples/b2b-saas.md): Filled-in B2B SaaS at Stage 1 ($1,500/mo cap), with concrete Hermes config per agent.
+- [examples/indie-app.md](examples/indie-app.md): Filled-in solo indie consumer app at Stage 0 ($400/mo cap).
+
+## External — authoritative sources
+
+- [github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent): Hermes Agent source.
+- [hermes-agent.nousresearch.com/docs](https://hermes-agent.nousresearch.com/docs/): Official docs.
+- [agentskills.io](https://agentskills.io): Open skills standard.
+
+## Sister repo
+
+- [github.com/jaggs6/paperclip-ing-startup](https://github.com/jaggs6/paperclip-ing-startup): Same Lean Startup template targeted at Paperclip instead of Hermes.
